@@ -134,8 +134,8 @@ transform: translateY(0.125rem);
     height: 100vh;
     background: var(--bg-modal);
     position: absolute;
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
     justify-content: center;
     align-items: center;
     flex-direction: column;

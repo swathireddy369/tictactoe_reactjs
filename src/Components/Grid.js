@@ -1,5 +1,5 @@
 import { useState } from "react";
-const Grid = ({ matrix,setMatrix,isCircleNext, setIsCircleNext, hasGameWon, setHasGameWon,setCount,count,players,setPlayers}) => {
+const Grid = ({hasGameStarted, matrix,setMatrix,isCircleNext, setIsCircleNext, hasGameWon, setHasGameWon,setCount,count,players,setPlayers}) => {
     let [scenarios, setScenarios] = useState([
         [0, 1, 2],
         [3, 4, 5],
@@ -48,7 +48,8 @@ const Grid = ({ matrix,setMatrix,isCircleNext, setIsCircleNext, hasGameWon, setH
 
     return (
         <div className="game" style={{
-            pointerEvents: hasGameWon ? "none" : "auto",
+            
+            pointerEvents: !hasGameStarted ? "none" : hasGameWon? "none": "auto"   ,
             // opacity: "0.7"
         }}>
             {matrix.map((item, index) => {
