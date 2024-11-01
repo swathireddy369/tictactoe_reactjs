@@ -15,16 +15,13 @@ const Game = () => {
     let [hasGameWon,setHasGameWon] = useState(false);
     let [count,setCount] = useState(0);
     let [modelDisplay,setModeldisplay]=useState(false);
-    console.log("hasGameWon",hasGameWon);
-   const resetGame = ()=>{
-    console.log("rest");
-    setCount(0);
+    const resetGame = ()=>{
+     setCount(0);
     setIsCircleNext(true);
     setHasGameWon(false);
     matrix.fill(2);
     setMatrix(matrix);
    }
-   console.log("main",players);
    
     return (
         <>

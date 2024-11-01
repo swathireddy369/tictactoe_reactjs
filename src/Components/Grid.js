@@ -11,7 +11,6 @@ const Grid = ({hasGameStarted, matrix,setMatrix,isCircleNext, setIsCircleNext, h
         [2, 4, 6]
     ])
     const handleClick = (index) => {
-        console.log("-----------------");
         let newMatrix = [...matrix]
         if (isCircleNext) {
             newMatrix[index] = 0
@@ -44,9 +43,7 @@ const Grid = ({hasGameStarted, matrix,setMatrix,isCircleNext, setIsCircleNext, h
         })
 
     }
-    console.log("matrix", matrix, hasGameWon);
-
-    return (
+   return (
         <div className="game" style={{
             
             pointerEvents: !hasGameStarted ? "none" : hasGameWon? "none": "auto"   ,

@@ -1,7 +1,5 @@
 const Instructions = ({matrix, players, hasGameStarted, resetGame, hasGameWon, isCircleNext, setHasGameStarted,setModeldisplay }) => {
-    console.log("has", hasGameWon, isCircleNext, hasGameStarted);
-
-    return (
+     return (
         <div className="instructions">
             {!hasGameWon ? <>
                 <h3>{!hasGameStarted ? "Click the Button to Start" :
